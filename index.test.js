@@ -167,7 +167,7 @@ describe('[Exercise 6] Car', () => {
     const input = 90
     const expected = 17
     focus.drive(input)
-    const actual = focus.gallons
+    const actual = focus.tank
     expect(actual).toEqual(expected)
   })
   test('[17] refueling allows to keep driving', () => {
@@ -175,14 +175,14 @@ describe('[Exercise 6] Car', () => {
     const expected = 10
     focus.drive(input)
     focus.refuel(10)
-    const actual = focus.gallons
+    const actual = focus.tank
     expect(actual).toEqual(expected)
   })
   test('[18] adding fuel to a full tank has no effect', () => {
     const input = 2
     const expected = 20
     focus.refuel(input)
-    const actual = focus.gallons
+    const actual = focus.tank
     expect(actual).toEqual(expected)
   })
 })
